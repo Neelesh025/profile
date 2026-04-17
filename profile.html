@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Profile</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+<div class="profile-box">
+
+    <h2>Personal Profile</h2>
+
+    <div class="image-box" onclick="document.getElementById('fileInput').click();">
+        <img id="preview" src="profile.jpg.jpeg" alt="Profile Image">
+    </div>
+
+    <input type="file" id="fileInput" accept="image/*" onchange="loadImage(event)" hidden>
+
+    <p><b>Name:</b> Neelesh</p>
+    <p><b>Age:</b> 24</p>
+    <p><b>City:</b> Hyderabad</p>
+    <p><b>Gender:</b> Male</p>
+
+    <div class="projects">
+        <b>Projects:</b>
+        <ul>
+            <li>Java</li>
+            <li>Python</li>
+            <li>AWS</li>
+            <li>Cybersecurity</li>
+        </ul>
+    </div>
+
+    <p class="about-title">About you:</p>
+    <p class="about-text">
+        I am passionate about technology and programming.<br>
+        I enjoy learning new skills every day.<br>
+        Interested in software development and cloud.<br>
+        I like solving real-world problems.<br>
+        Always eager to grow and improve.
+    </p>
+
+</div>
+
+<script>
+function loadImage(event) {
+    const img = document.getElementById("preview");
+    if (event.target.files.length > 0) {
+        img.src = URL.createObjectURL(event.target.files[0]);
+    }
+}
+</script>
+
+</body>
+</html>
