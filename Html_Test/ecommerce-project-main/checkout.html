@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Checkout</title>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+<div>
+    <a href="index.html">Home</a>
+    <a href="products.html">Products</a>
+    <a href="checkout.html">Cart</a>
+    <a href="contact.html">Contact</a>
+</div>
+
+<h2>Checkout</h2>
+
+<form onsubmit="return validateForm()">
+
+<input type="text" id="name" placeholder="Full Name"><br><br>
+
+<input type="email" id="email" placeholder="Email"><br><br>
+
+<input type="text" id="phone" placeholder="Phone"><br><br>
+
+<input type="text" id="pin" placeholder="PIN Code"><br><br>
+
+<input type="radio" name="payment"> Cash
+<input type="radio" name="payment"> Card<br><br>
+
+<input type="checkbox"> Accept Terms<br><br>
+
+<button type="submit">Place Order</button>
+
+</form>
+
+<script src="js/script.js"></script>
+
+</body>
+</html>
