@@ -1,5 +1,3 @@
-# Question 2: Tuples
-
 t = (10, 20, 30, 40, 50, 20, 60)
 
 print("Count of 20:", t.count(20))
