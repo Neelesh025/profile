@@ -1,5 +1,3 @@
-#Question 5:Tickets
-
 def calculate_ticket_price(seats, timing, is_weekend):
     
     prices = {
@@ -26,24 +24,19 @@ def calculate_ticket_price(seats, timing, is_weekend):
     if valid_seats == 0:
         return "No valid booking"
     
-    # timing
     timing_total = base_total * timing_mult[timing]
     
-    # weekend
     if is_weekend:
         timing_total += timing_total * 0.10
     
-    # discount
     discount = 0
     if valid_seats >= 5:
         discount = timing_total * 0.15
         timing_total -= discount
     
-    # booking fee
     fee = valid_seats * 50
     total_after_fee = timing_total + fee
     
-    # GST
     tax = total_after_fee * 0.12
     
     final_amount = total_after_fee + tax
